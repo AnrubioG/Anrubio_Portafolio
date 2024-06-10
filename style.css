@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #20252d;
+}
+
+/* estilos del inicio */
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.inicio {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+.inicio h3 {
+  padding: 5px 0;
+}
+
+.inicio h1 {
+  color: #2acf7f;
+  padding: 5px 0;
+  font-size: 40px;
+}
+
+.inicio p {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.inicio .contenedor-botones {
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 15px;
+  border: 1px solid #2acf7f;
+  color: #2acf7f;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn2 {
+  background-color: #2acf7f;
+  color: #20252d;
+  cursor: pointer;
+}
+
+btn:hover {
+  box-shadow: 0 020px #91e0ba;
+}
+
+.inicio .contenedor-img {
+  background: linear-gradient(#2acf7f, transparent);
+  max-width: 400px;
+  border-radius: 230px 230px 0 0;
+}
+
+.inicio .contenedor-img img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 20px 50px 0 40px;
+}
+
+.inicio .contenedor-redes {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inicio .contenedor-redes a {
+  display: block;
+  color: #2acf7f;
+  font-size: 20px;
+  margin: 15px 0;
+  transition: 3px;
+}
+
+.inicio .contenedor-redes a:hover i {
+  text-shadow: 0 0 20px #91e0ba;
+}
+
+/* estilos navegacion */
+
+.nav {
+  width: 400px;
+  height: 76px;
+  background: #20252d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* z-index: 100; */
+}
+
+.navegacion {
+  width: 400px;
+  height: 70px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.navegacion ul {
+  position: relative;
+  display: flex;
+  width: 350px;
+}
+
+.navegacion ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navegacion ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navegacion ul li a i {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.navegacion ul li.active a i {
+  transform: translateY(-35px);
+}
+
+.navegacion ul li a .texto {
+  position: absolute;
+  color: #3f516f;
+  font-size: 0.65em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navegacion ul li.active a .texto {
+  opacity: 1;
+  transform: translateY(10px);
+  color: #fff;
+}
+
+.indicator {
+  position: absolute;
+  background-color: #2acf7f;
+  width: 70px;
+  height: 70px;
+  top: -50%;
+  border-radius: 50%;
+  border: 6px solid #20252d;
+  transition: 0.5s;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -6px 0 0 #20252d;
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -6px 0 0 #20252d;
+}
+
+.navegacion ul li:nth-child(1).active ~ .indicator {
+  transform: translate(calc(70px * 0));
+}
+
+.navegacion ul li:nth-child(2).active ~ .indicator {
+  transform: translate(calc(70px * 1));
+}
+
+.navegacion ul li:nth-child(3).active ~ .indicator {
+  transform: translate(calc(70px * 2));
+}
+.navegacion ul li:nth-child(4).active ~ .indicator {
+  transform: translate(calc(70px * 3));
+}
+.navegacion ul li:nth-child(5).active ~ .indicator {
+  transform: translate(calc(70px * 4));
+}
