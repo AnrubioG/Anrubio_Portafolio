@@ -250,7 +250,7 @@ btn:hover {
 /* estilos sobre mi */
 
 #sobre-mi {
-  padding: 50px 10px;
+  padding: 30px 10px;
   height: 100vh;
 }
 
@@ -288,6 +288,7 @@ btn:hover {
 #sobre-mi .contenido .fila .col .skills p {
   margin-right: 40px;
   margin-bottom: 3px;
+  color: #91e0ba;
 }
 
 #sobre-mi .contenido .fila .col .skills .punto {
@@ -392,7 +393,7 @@ btn:hover {
 /* estilos reflexion */
 
 #reflexión {
-  padding: 50px 10px;
+  padding: 20px 10px;
   height: 100vh;
   text-align: center;
   display: flex;
@@ -433,7 +434,7 @@ btn:hover {
   margin: 10px;
 }
 
-/* estilos portafolio */
+/* estilos proyectos */
 .portafolio {
   text-align: center;
 }
@@ -443,6 +444,7 @@ btn:hover {
   justify-content: center;
   grid-template-columns: 400px 400px;
   gap: 40px;
+  padding: 4% 0;
 }
 
 .portafolio .fila .item {
@@ -462,4 +464,7 @@ btn:hover {
 .portafolio .fila .item p {
   color: #fff;
   margin: 20px 0;
+}
+.portafolio .fila .item a {
+  text-decoration: none;
 }
